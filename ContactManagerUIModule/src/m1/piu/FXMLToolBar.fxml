@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+
+<ToolBar prefHeight="40.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m1.piu.FXMLMainFrameController">
+   <items>
+      <TextField promptText="Look for file" />
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Search" />
+      <Button fx:id="newContactButton" mnemonicParsing="false" onAction="#handleButtonNewContact" prefHeight="25.0" prefWidth="105.0" text="New Contact">
+         <tooltip>
+            <Tooltip text="Ajouter une fiche" />
+         </tooltip>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Edit Contact">
+         <tooltip>
+            <Tooltip text="Modifier une fiche" />
+         </tooltip>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Remove contact">
+         <tooltip>
+            <Tooltip text="Suprimer une fiche" />
+         </tooltip>
+      </Button>
+   </items>
+</ToolBar>
