@@ -27,7 +27,12 @@ public final class Clear implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        DialogDisplayer.getDefault().notify(new NotifyDescriptor.Message("Do you want Clear ?", NotifyDescriptor.WARNING_MESSAGE));
-        
+        //
+        NotifyDescriptor d =
+            new NotifyDescriptor.Confirmation("Really do this?!", "Dialog Title",
+                                       NotifyDescriptor.OK_CANCEL_OPTION);
+            if (DialogDisplayer.getDefault().notify(d) == NotifyDescriptor.OK_OPTION) {
+            DialogDisplayer.getDefault().notify(new NotifyDescriptor.Message("Clearing...", NotifyDescriptor.WARNING_MESSAGE));
+            }
     }
 }
