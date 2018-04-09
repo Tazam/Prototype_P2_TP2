@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
 <filesystem>
+    <folder name="Actions">
+        <folder name="Window">
+            <file name="m1-piu-FXMLMainPanelTopComponent.instance_hidden"/>
+            <file name="m1-piu-testTopComponent.instance_hidden"/>
+        </folder>
+    </folder>
     <folder name="Menu">
         <file name="Edit_hidden"/>
         <file name="GoTo_hidden"/>
@@ -9,4 +15,5 @@
         <file name="Window_hidden"/>
     </folder>
     <folder name="Toolbars"/>
+    
 </filesystem>
