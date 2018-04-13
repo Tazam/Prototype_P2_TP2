@@ -11,12 +11,18 @@
         </folder>
     </folder>
     <folder name="Menu">
-        <file name="Edit_hidden"/>
-        <file name="Fichier_hidden"/>
-        <folder name="File">
+        <folder name="Adress Book">
+            <file name="m1-piu-Clear.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/m1-piu-Clear.instance"/>
+            </file>
             <file name="m1-piu-ContactFormWizardAction.shadow">
                 <attr name="originalFile" stringvalue="Actions/NewContact/m1-piu-ContactFormWizardAction.instance"/>
             </file>
+        </folder>
+        <file name="Edit_hidden"/>
+        <file name="Fichier_hidden"/>
+        <folder name="File">
+            <file name="m1-piu-Clear.shadow_hidden"/>
             <file name="m1-piu-NewContact.shadow_hidden"/>
         </folder>
         <file name="GoTo_hidden"/>
