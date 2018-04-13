@@ -25,6 +25,9 @@
         <file name="Window_hidden"/>
     </folder>
     <folder name="Toolbars">
+        <file name="Clipboard_hidden"/>
+        <file name="Memory_hidden"/>
+        <file name="UndoRedo_hidden"/>
         <file name="tool1.css" url="tool1.css"/>
     </folder>
     
