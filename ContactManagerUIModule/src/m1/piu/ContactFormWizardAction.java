@@ -14,12 +14,15 @@ import java.util.List;
 import javax.swing.JComponent;
 import org.openide.DialogDisplayer;
 import org.openide.WizardDescriptor;
+import org.openide.awt.ActionID;
+import org.openide.awt.ActionReference;
+import org.openide.awt.ActionRegistration;
 
 // An example action demonstrating how the wizard could be called from within
 // your code. You can move the code below wherever you need, or register an action:
-// @ActionID(category="...", id="m1.piu.ContactFormWizardAction")
-// @ActionRegistration(displayName="Open ContactForm Wizard")
-// @ActionReference(path="Menu/Tools", position=...)
+ @ActionID(category="NewContact", id="m1.piu.ContactFormWizardAction")
+ @ActionRegistration(displayName="New Contact")
+ @ActionReference(path="Menu/Fichier", position=0)
 public final class ContactFormWizardAction implements ActionListener {
 
     @Override

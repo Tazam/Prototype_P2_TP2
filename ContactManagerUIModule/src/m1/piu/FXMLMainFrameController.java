@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +26,7 @@ import javafx.stage.Stage;
  *
  * @author Tazam
  */
-public class FXMLMainFrameController implements Initializable {
+public class FXMLMainFrameController extends JFXPanel implements Initializable {
     
     @FXML
     AnchorPane anchorPaneContactTable,anchorPaneContactDetails;

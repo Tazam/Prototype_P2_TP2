@@ -2,6 +2,9 @@
 <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
 <filesystem>
     <folder name="Actions">
+        <folder name="Edit">
+            <file name="m1-piu-NewContact.instance_hidden"/>
+        </folder>
         <folder name="Window">
             <file name="m1-piu-FXMLMainPanelTopComponent.instance_hidden"/>
             <file name="m1-piu-testTopComponent.instance_hidden"/>
@@ -9,11 +12,20 @@
     </folder>
     <folder name="Menu">
         <file name="Edit_hidden"/>
+        <file name="Fichier_hidden"/>
+        <folder name="File">
+            <file name="m1-piu-ContactFormWizardAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/NewContact/m1-piu-ContactFormWizardAction.instance"/>
+            </file>
+            <file name="m1-piu-NewContact.shadow_hidden"/>
+        </folder>
         <file name="GoTo_hidden"/>
         <file name="Tools_hidden"/>
         <file name="View_hidden"/>
         <file name="Window_hidden"/>
     </folder>
-    <folder name="Toolbars"/>
+    <folder name="Toolbars">
+        <file name="tool1.css" url="tool1.css"/>
+    </folder>
     
 </filesystem>

@@ -5,8 +5,16 @@
  */
 package m1.piu;
 
+import java.io.IOException;
+import java.net.URL;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.JavaFXBuilderFactory;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javax.swing.event.ChangeListener;
 import org.openide.WizardDescriptor;
+import org.openide.util.Exceptions;
 import org.openide.util.HelpCtx;
 
 public class ContactFormWizardPanel1 implements WizardDescriptor.Panel<WizardDescriptor> {
@@ -15,20 +23,42 @@ public class ContactFormWizardPanel1 implements WizardDescriptor.Panel<WizardDes
      * The visual component that displays this panel. If you need to access the
      * component from this class, just use getComponent().
      */
-    private ContactFormVisualPanel1 component;
-
+    //private ContactFormVisualPanel1 component;
+    public FXMLMainFrameController component;
+    
     // Get the visual component for the panel. In this template, the component
     // is kept separate. This can be more efficient: if the wizard is created
     // but never displayed, or not all panels are displayed, it is better to
     // create only those which really need to be visible.
     @Override
-    public ContactFormVisualPanel1 getComponent() {
+    public FXMLMainFrameController getComponent() {
         if (component == null) {
-            component = new ContactFormVisualPanel1();
+            component = new FXMLMainFrameController(); //return new JFXPanel controller
+            Platform.setImplicitExit(false);
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    createScene();  //standard Swing Interop Pattern
+                }
+            });
         }
         return component;
     }
-
+    
+    private void createScene() {
+        try {
+            URL location = getClass().getResource("FXMLContactPanel.fxml"); //same FXML copied from JavaFX app
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(location);
+            fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
+            Parent root = (Parent) fxmlLoader.load(location.openStream());
+            Scene scene = new Scene(root);
+            component.setScene(scene);    
+            component = (FXMLMainFrameController) fxmlLoader.getController();    
+        } catch (IOException ex) {
+            Exceptions.printStackTrace(ex);
+        }
+    }
     @Override
     public HelpCtx getHelp() {
         // Show no Help button for this panel:

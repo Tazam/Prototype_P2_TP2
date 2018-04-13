@@ -5,6 +5,7 @@
  */
 package m1.piu;
 
+import m1.piu.Bundle;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
