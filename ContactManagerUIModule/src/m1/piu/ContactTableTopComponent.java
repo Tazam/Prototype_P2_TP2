@@ -98,7 +98,7 @@ public final class ContactTableTopComponent extends TopComponent {
     
     private void createScene() {
         try {
-            URL location = getClass().getResource("FXMLAdressBookViewer.fxml");
+            URL location = getClass().getResource("FXMLContactTable.fxml");
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(location);
             fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
