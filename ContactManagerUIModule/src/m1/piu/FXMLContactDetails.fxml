@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m1.piu.FXMLMainFrameController">
+   <children>
+      <Text layoutX="189.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toto Toto" wrappingWidth="121.7294921875">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact details:" wrappingWidth="207.72948569059372">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <AnchorPane id="identity" layoutX="16.0" layoutY="70.0" prefHeight="183.0" prefWidth="340.0">
+         <children>
+            <fx:include source="FXMLIdentity.fxml" />
+         </children></AnchorPane>
+      <AnchorPane id="phoneNumber" layoutX="16.0" layoutY="263.0" prefHeight="118.0" prefWidth="340.0">
+         <children>
+            <fx:include source="FXMLPhoneNumber.fxml" />
+         </children></AnchorPane>
+      <AnchorPane id="adress" layoutX="363.0" layoutY="71.0" prefHeight="308.0" prefWidth="200.0">
+         <children>
+           <fx:include source="FXMLAddress.fxml" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

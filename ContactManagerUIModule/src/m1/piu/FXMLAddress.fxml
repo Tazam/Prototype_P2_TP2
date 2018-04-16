@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="174.0" prefWidth="201.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m1.piu.FXMLMainFrameController">
+   <children>
+      <AnchorPane layoutX="1.0" prefHeight="179.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="8.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rue de la Republique 84000 AVIGNON FRANCE" wrappingWidth="167.7294921875" />
+            <Button layoutX="94.0" layoutY="130.0" mnemonicParsing="false" text="See on map" />
+         </children>
+      </AnchorPane>
+      <MenuBar layoutY="-2.0" prefHeight="29.0" prefWidth="201.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Address" />
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

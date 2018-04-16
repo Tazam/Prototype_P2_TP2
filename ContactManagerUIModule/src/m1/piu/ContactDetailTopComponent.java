@@ -23,36 +23,37 @@ import org.openide.util.NbBundle.Messages;
 
 /**
  * Top component which displays something.
- *//*
+ */
+/*
 @ConvertAsProperties(
-        dtd = "-//m1.piu//ContactTable//EN",
+        dtd = "-//m1.piu//ContactDetail//EN",
         autostore = false
 )*/
 @TopComponent.Description(
-        preferredID = "ContactTableTopComponent",
+        preferredID = "ContactDetailTopComponent",
         iconBase = "m1/piu/if_Database_132580.png",
         persistenceType = TopComponent.PERSISTENCE_ALWAYS
 )
-@TopComponent.Registration(mode = "editor", openAtStartup = true)
-@ActionID(category = "Window", id = "m1.piu.ContactTableTopComponent")
+@TopComponent.Registration(mode = "output", openAtStartup = true)
+@ActionID(category = "Window", id = "m1.piu.ContactDetailTopComponent")
 @ActionReference(path = "Menu/Window" /*, position = 333 */)
 @TopComponent.OpenActionRegistration(
-        displayName = "#CTL_ContactTableAction",
-        preferredID = "ContactTableTopComponent"
+        displayName = "#CTL_ContactDetailAction",
+        preferredID = "ContactDetailTopComponent"
 )
 @Messages({
-    "CTL_ContactTableAction=ContactTable",
-    "CTL_ContactTableTopComponent=ContactTable Window",
-    "HINT_ContactTableTopComponent=This is a ContactTable window"
+    "CTL_ContactDetailAction=ContactDetail",
+    "CTL_ContactDetailTopComponent=ContactDetail Window",
+    "HINT_ContactDetailTopComponent=This is a ContactDetail window"
 })
-public final class ContactTableTopComponent extends TopComponent {
+public final class ContactDetailTopComponent extends TopComponent {
 
     private static JFXPanel fxPanel;
     private FXMLMainFrameController controller;
-    public ContactTableTopComponent() {
+    public ContactDetailTopComponent() {
         initComponents();
-        setName(Bundle.CTL_ContactTableTopComponent());
-        setToolTipText(Bundle.HINT_ContactTableTopComponent());
+        setName(Bundle.CTL_ContactDetailTopComponent());
+        setToolTipText(Bundle.HINT_ContactDetailTopComponent());
         putClientProperty(TopComponent.PROP_CLOSING_DISABLED, Boolean.TRUE);
         setLayout(new BorderLayout());
         init();
@@ -80,7 +81,7 @@ public final class ContactTableTopComponent extends TopComponent {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
-   private void init()
+    private void init()
     {
         fxPanel = new JFXPanel();
         add(fxPanel, BorderLayout.CENTER);
@@ -98,7 +99,7 @@ public final class ContactTableTopComponent extends TopComponent {
     
     private void createScene() {
         try {
-            URL location = getClass().getResource("FXMLAdressBookViewer.fxml");
+            URL location = getClass().getResource("FXMLContactDetails.fxml");
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(location);
             fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
